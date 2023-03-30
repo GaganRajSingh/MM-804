@@ -1,32 +1,10 @@
 import Plot from 'react-plotly.js';
-// import Papa from 'papaparse';
 import mean_temp from '../data/mean_temp.json'
 import min_temp from '../data/min_temp.json'
 import max_temp from '../data/max_temp.json'
 import years from '../data/years.json'
 
 function Surface() {
-
-    // const [mean_z, setMeanData] = useState(null);
-
-    // fetch(mean_data)
-    // .then(data => data.text())
-    // .then(data =>{
-    //     Papa.parse(data, {
-    //         header: true,
-    //         complete: (data) => {
-    //             var z_data = []
-    //             data.data.map((row) => {
-    //                 var r = []
-    //                 for (const [k, v] of Object.entries(row)){
-    //                     r.push(v)
-    //                 }
-    //                 z_data.push(r)
-    //             } )
-    //             setMeanData(z_data)
-    //         }
-    //     })
-    // });
 
     const data = [
         {
