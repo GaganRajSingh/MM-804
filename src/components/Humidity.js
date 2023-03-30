@@ -29,7 +29,7 @@ function Humidity() {
     y: humidityMin,
     name: 'Humidity Min',
     type: 'violin',
-    side: 'positive',
+    side: 'both',
     box: { visible: true },
     line: { color: '#1f77b4' },
   };
@@ -38,7 +38,7 @@ function Humidity() {
     y: humidityMax,
     name: 'Humidity Max',
     type: 'violin',
-    side: 'positive',
+    side: 'both',
     box: { visible: true },
     line: { color: '#d62728' },
   };
@@ -47,7 +47,7 @@ function Humidity() {
     y: relativeHumidityAvg,
     name: 'Relative Humidity Avg',
     type: 'violin',
-    side: 'positive',
+    side: 'both',
     box: { visible: true },
     line: { color: '#2ca02c' },
   };
@@ -63,9 +63,7 @@ function Humidity() {
           width: 800,
           height: 500,
           title: selectedYear ? `Humidity Distribution for Year ${selectedYear}` : 'Humidity Distribution',
-          yaxis: {
-            title: 'Humidity (%)',
-          },
+          yaxis: { title: 'Humidity (%)' },
         }}
       />
       <div style={{ marginTop: '20px' }}>

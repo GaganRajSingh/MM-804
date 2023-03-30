@@ -7,6 +7,7 @@ import precipitationData from '../data/climate-daily.csv';
 
 function Precipitation() {
   const [data, setData] = useState([]);
+  const [selectedYear, setSelectedYear] = useState(null);
 
   useEffect(() => {
     const fetchParseData = async () => {
@@ -24,12 +25,12 @@ function Precipitation() {
 
   const groupByTimestamp = groupBy(data, 'LOCAL_DATE');
   const dates = Object.keys(groupByTimestamp)
-  .filter(date => {
-    const counts = groupByTimestamp[date];
-    return counts.some(count => parseFloat(count.TOTAL_RAIN) >= 0 || parseFloat(count.TOTAL_SNOW) >= 0);
-  })
-  .sort((a, b) => new Date(a) - new Date(b));
-
+    .filter(date => {
+      const counts = groupByTimestamp[date];
+      return counts.some(count => parseFloat(count.TOTAL_RAIN) >= 0 || parseFloat(count.TOTAL_SNOW) >= 0);
+    })
+    .filter((date) => !selectedYear || new Date(date).getFullYear() === selectedYear)
+    .sort((a, b) => new Date(a) - new Date(b));
 
   const rain = dates.map((date) => {
     const counts = groupByTimestamp[date];
@@ -38,10 +39,12 @@ function Precipitation() {
 
   const snow = dates.map((date) => {
     const counts = groupByTimestamp[date];
-    return counts.reduce((total, count) => total + parseFloat(count.TOTAL_SNOW), 0);
+    return counts.reduce((total, count) => total + parseFloat(count.TOTAL_SNOW), 0)*10;
   });
 
-  console.log(snow);
+  const years = Array.from(new Set(data.map((row) => new Date(row.LOCAL_DATE).getFullYear())))
+  .filter(year => !isNaN(parseInt(year)));
+
   const traces = [
     {
       x: dates,
@@ -62,19 +65,28 @@ function Precipitation() {
   ];
 
   return (
-    <div>
+    <div>      
       <Plot
         data={traces}
         layout={{
-          title: 'Precipitation by Snow and Rain Stacked Bar Chart',
+          title: selectedYear ? `Precipitation Distribution for Year ${selectedYear}` : 'Precipitation Distribution',
           xaxis: { title: 'Date' },
-          yaxis: { title: '' },
+          yaxis: { title: 'Precipitation (mm)' },
           width: 800,
           height: 600,
           autosize: true,
-          barmode: "stack"
+          barmode: 'stack',
         }}
       />
+      <div style={{ marginTop: '20px' }}>
+        <label htmlFor="year-dropdown">Select Year: </label>
+        <select id="year-dropdown" value={selectedYear} onChange={(e) => setSelectedYear(parseInt(e.target.value))}>
+          <option value={null}>All Years</option>
+          {years.map((year) => (
+            <option key={year} value={year}>{year}</option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }
