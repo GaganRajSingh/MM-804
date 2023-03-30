@@ -3,6 +3,8 @@ import Surface from './Surface';
 import Temp_slider from './Temp_slider';
 import Wind from './Wind'
 import Snow from './Snow'
+import Precipitation from './Precipitation'
+import Humidity from './Humidity'
 import Aqi from './Aqi';
 import Slicing from './Slicing'
 
@@ -15,6 +17,8 @@ function App() {
             <Wind />
             <Snow />
             <Aqi />
+            <Precipitation />
+            <Humidity />
         </div>
     );
 }
