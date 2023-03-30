@@ -14,7 +14,7 @@ function Slicing() {
     const data3d = [
         {
             type: 'mesh3d',
-            x: [0, 300, 300, 0],
+            x: [0, 365, 365, 0],
             y: [year, year, year, year],
             z: [-40, -40, 40, 40],
             i: [0, 1, 2, 3],
