@@ -4,6 +4,7 @@ import Temp_slider from './Temp_slider';
 import Wind from './Wind'
 import Snow from './Snow'
 import Precipitation from './Precipitation'
+import Humidity from './Humidity'
 // import Test from './Test'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <Wind />
             <Snow />
             <Precipitation />
+            <Humidity />
             {/* <div className='row'>
                 <div className='graph-card'>
                     <Surface />
