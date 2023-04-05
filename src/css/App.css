@@ -4,7 +4,7 @@
     padding: 2%;
     width: 90%;
     /* height: 1600px; */
-    background-color: grey;
+    background-color: white;
 }
 
 .row {
@@ -28,6 +28,44 @@
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    background-color: #2e8b57;
+    padding-top: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .sidebar a:hover,
+  .sidebar a.active {
+    background-color: #fff;
+    color: #2e8b57;
+  }
+
+  .title {
+    color: green;
+    text-align: center;
+  }
+  
 /* .plot {
     margin-top: 5%
 } */
