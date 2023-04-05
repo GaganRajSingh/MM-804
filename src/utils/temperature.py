@@ -9,7 +9,8 @@ max_values = {}
 
 for i, row in weather.iterrows():
     year = row['LOCAL_DATE'][:4]
-    
+    if year=='1996' or year=='2023':
+        continue
     if not math.isnan(row['MEAN_TEMPERATURE']):
         mean_values[year] = mean_values.get(year, []) + [row['MEAN_TEMPERATURE']]
     else:
@@ -39,19 +40,6 @@ for values in min_values.values():
 max_data = []
 for values in max_values.values():
     max_data.append(values)
-
-
-# mean_values = {k:pandas.Series(v) for k, v in mean_values.items()}
-# min_values = {k:pandas.Series(v) for k, v in min_values.items()}
-# max_values = {k:pandas.Series(v) for k, v in max_values.items()}
-
-# mean_df = pandas.DataFrame(mean_values)
-# min_df = pandas.DataFrame(min_values)
-# max_df = pandas.DataFrame(max_values)
-
-# mean_df.to_csv('../data/mean_temp.csv')
-# min_df.to_csv('../data/min_temp.csv')
-# max_df.to_csv('../data/max_temp.csv')
 
 with open('../data/mean_temp.json', 'w') as output_file:
     json.dump(mean_data, output_file)
