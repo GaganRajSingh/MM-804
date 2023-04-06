@@ -13,6 +13,7 @@ function Wind () {
     const layout = {
         width: 800,
         height: 600,
+        title: "Wind direction",
         polar: {
             angularaxis: {direction: "clockwise"},
             barmode: "overlay"

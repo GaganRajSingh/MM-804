@@ -18,6 +18,7 @@ function Temp_slider () {
     const layout = {
         width: 800,
         height: 600,
+        title: 'Temperature of single year',
         sliders : [{
             len: 0.95,
             transition: {duration: 500},
