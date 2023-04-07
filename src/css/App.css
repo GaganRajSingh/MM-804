@@ -1,10 +1,19 @@
 .App {
-    text-align: center;
-    margin: 2em auto;
-    padding: 2%;
-    width: 90%;
-    /* height: 1600px; */
-    background-color: white;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2%;
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  background-image: url('../img/gratisography-13H-free-stock-photo.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+/* Add the following code to create a parallax effect */
+.App:hover {
+  background-position-x: calc(50% - 5px);
+  background-position-y: calc(50% - 5px);
 }
 
 .row {
@@ -64,7 +73,27 @@
   .title {
     color: green;
     text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-family: "Lucida Console",  monospace;
+    text-shadow: 2px 2px 8px #ffffff;
   }
+
+  .author {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 32px;
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+  }
+  
   
 /* .plot {
     margin-top: 5%
