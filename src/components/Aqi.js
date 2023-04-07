@@ -46,6 +46,7 @@ function Aqi () {
     var layout = {
         width: 800,
         height: 600,
+        title: 'AQI distribution of past 150 days',
         yaxis: {
             range: [0, 10],
         },

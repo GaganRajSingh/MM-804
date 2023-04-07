@@ -34,6 +34,7 @@ function Slicing() {
     const layout3d = {
         width: 650,
         height: 550,
+        title: 'Temperature over years'
     }
 
     const data2d = [
@@ -46,8 +47,9 @@ function Slicing() {
     ]
 
     const layout2d = {
-        width: 650,
-        height: 550,
+        width: 520,
+        height: 470,
+        title: 'Temperature of single year',
         sliders : [{
             len: 0.95,
             transition: {duration: 500},

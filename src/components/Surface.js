@@ -47,7 +47,8 @@ function Surface() {
             }]
         }],
         width: 800,
-        height: 600
+        height: 600,
+        title: 'Temperature over years'
     }
 
     return (
