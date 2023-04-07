@@ -25,7 +25,10 @@ function App() {
         </nav>
         <main>
           <Routes>
-            <Route path="/" element={<></>} />
+            <Route path="/" element={<div className="home">
+              <h1 className="title">Weather Data Visualization</h1>
+              <p className="author">By Yanshan Wan and Gagan Singh</p>
+            </div>} />
             <Route path="/temperature" element={<><Surface /><Slicing /><Temp_slider /></>} />
             <Route path="/precipitation" element={<>              
               <h2 className="title">Precipitation</h2>
