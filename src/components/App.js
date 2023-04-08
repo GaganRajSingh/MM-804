@@ -43,13 +43,13 @@ function App() {
           <Routes>
             <Route path="/" element={<div className="home">
               <h1 className="title">Climate Data Visualization</h1>
-              <p className="author">By Yanshan Wan and Gagan Singh</p>
+              <p className="author">By Yanshan Wan and Gagan Raj Singh</p>
             </div>} />
-            <Route path="/temperature" element={<><Slicing /><Surface /><Temp_slider /></>} />
+            <Route path="/temperature" element={<><Surface /><Slicing /><Temp_slider /></>} />
             <Route path="/temperature/slider" element={<Slicing />} />
             <Route path="/temperature/over-years" element={<Surface />} />
             <Route path="/temperature/single-year" element={<Temp_slider />} />
-            <Route path="/precipitation" element={<><Snow /><Precipitation /></>} />
+            <Route path="/precipitation" element={<><Precipitation /><Snow /></>} />
             <Route path="/precipitation/distribution" element={<><Precipitation /></>} />
             <Route path="/precipitation/snow" element={<><Snow /></>} />
             <Route path="/humidity" element={<Humidity />} />
