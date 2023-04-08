@@ -78,7 +78,7 @@ function Precipitation() {
           barmode: 'stack',
         }}
       />
-      <div style={{ marginTop: '20px' }}>
+      <div style={{ marginTop: '20px', marginBottom: '80px' }}>
         <label htmlFor="year-dropdown">Select Year: </label>
         <select id="year-dropdown" value={selectedYear} onChange={(e) => setSelectedYear(parseInt(e.target.value))}>
           <option value={null}>All Years</option>
