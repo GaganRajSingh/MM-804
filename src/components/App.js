@@ -49,7 +49,7 @@ function App() {
             <Route path="/temperature/slider" element={<Slicing />} />
             <Route path="/temperature/over-years" element={<Surface />} />
             <Route path="/temperature/single-year" element={<Temp_slider />} />
-            <Route path="/precipitation" element={<><Precipitation /><Snow /></>} />
+            <Route path="/precipitation" element={<><Snow /><Precipitation /></>} />
             <Route path="/precipitation/distribution" element={<><Precipitation /></>} />
             <Route path="/precipitation/snow" element={<><Snow /></>} />
             <Route path="/humidity" element={<Humidity />} />
