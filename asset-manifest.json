@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MM-804/static/css/main.dac1332d.css",
-    "main.js": "/MM-804/static/js/main.2aea2993.js",
+    "main.js": "/MM-804/static/js/main.54973f10.js",
     "static/media/climate-daily.csv": "/MM-804/static/media/climate-daily.e4f90db6bf61f0c4c466.csv",
-    "static/media/ACISDailyData-Humidity.csv": "/MM-804/static/media/ACISDailyData-Humidity.98bdfda08130bcaebdfb.csv",
+    "static/media/ACISDailyData-Humidity.csv": "/MM-804/static/media/ACISDailyData-Humidity.472e5c029381ec3e5c10.csv",
     "index.html": "/MM-804/index.html",
     "main.dac1332d.css.map": "/MM-804/static/css/main.dac1332d.css.map",
-    "main.2aea2993.js.map": "/MM-804/static/js/main.2aea2993.js.map"
+    "main.54973f10.js.map": "/MM-804/static/js/main.54973f10.js.map"
   },
   "entrypoints": [
     "static/css/main.dac1332d.css",
-    "static/js/main.2aea2993.js"
+    "static/js/main.54973f10.js"
   ]
 }
