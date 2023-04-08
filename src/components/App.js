@@ -16,45 +16,45 @@ function App() {
         <nav className="sidebar">
           <ul>
             <li>
-              <NavLink to="/" exact activeClassName="active">Home</NavLink>
+              <NavLink to="/MM-804/" exact activeClassName="active">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/temperature" activeClassName="active">Temperature</NavLink>
+              <NavLink to="/MM-804/temperature" activeClassName="active">Temperature</NavLink>
               <ul>
-                <li><NavLink to="/temperature/slider" activeClassName="active">Temperature slider</NavLink></li>
-                <li><NavLink to="/temperature/over-years" activeClassName="active">Temperature over years</NavLink></li>
-                <li><NavLink to="/temperature/single-year" activeClassName="active">Temperature of single year</NavLink></li>
+                <li><NavLink to="/MM-804/temperature/slider" activeClassName="active">Temperature slider</NavLink></li>
+                <li><NavLink to="/MM-804/temperature/over-years" activeClassName="active">Temperature over years</NavLink></li>
+                <li><NavLink to="/MM-804/temperature/single-year" activeClassName="active">Temperature of single year</NavLink></li>
               </ul>
             </li>
             <li>
-              <NavLink to="/precipitation" activeClassName="active">Precipitation</NavLink>
+              <NavLink to="/MM-804/precipitation" activeClassName="active">Precipitation</NavLink>
               <ul>
-                <li><NavLink to="/precipitation/distribution" activeClassName="active">Precipitation Distribution</NavLink></li>
-                <li><NavLink to="/precipitation/snow" activeClassName="active">Snow</NavLink></li>
+                <li><NavLink to="/MM-804/precipitation/distribution" activeClassName="active">Precipitation Distribution</NavLink></li>
+                <li><NavLink to="/MM-804/precipitation/snow" activeClassName="active">Snow</NavLink></li>
               </ul>
             </li>
-            <li><NavLink to="/humidity" activeClassName="active">Humidity</NavLink></li>
-            <li><NavLink to="/aqi" activeClassName="active">AQI</NavLink></li>
-            <li><NavLink to="/wind" activeClassName="active">Wind</NavLink></li>
+            <li><NavLink to="/MM-804/humidity" activeClassName="active">Humidity</NavLink></li>
+            <li><NavLink to="/MM-804/aqi" activeClassName="active">AQI</NavLink></li>
+            <li><NavLink to="/MM-804/wind" activeClassName="active">Wind</NavLink></li>
           </ul>
         </nav>
 
         <main>
           <Routes>
-            <Route path="/" element={<div className="home">
+            <Route path="/MM-804" element={<div className="home">
               <h1 className="title">Climate Data Visualization</h1>
               <p className="author">By Yanshan Wan and Gagan Raj Singh</p>
             </div>} />
-            <Route path="/temperature" element={<><Surface /><Slicing /><Temp_slider /></>} />
-            <Route path="/temperature/slider" element={<Slicing />} />
-            <Route path="/temperature/over-years" element={<Surface />} />
-            <Route path="/temperature/single-year" element={<Temp_slider />} />
-            <Route path="/precipitation" element={<><Precipitation /><Snow /></>} />
-            <Route path="/precipitation/distribution" element={<><Precipitation /></>} />
-            <Route path="/precipitation/snow" element={<><Snow /></>} />
-            <Route path="/humidity" element={<Humidity />} />
-            <Route path="/aqi" element={<Aqi />} />
-            <Route path="/wind" element={<Wind />} />
+            <Route path="/MM-804/temperature" element={<><Surface /><Slicing /><Temp_slider /></>} />
+            <Route path="/MM-804/temperature/slider" element={<Slicing />} />
+            <Route path="/MM-804/temperature/over-years" element={<Surface />} />
+            <Route path="/MM-804/temperature/single-year" element={<Temp_slider />} />
+            <Route path="/MM-804/precipitation" element={<><Precipitation /><Snow /></>} />
+            <Route path="/MM-804/precipitation/distribution" element={<><Precipitation /></>} />
+            <Route path="/MM-804/precipitation/snow" element={<><Snow /></>} />
+            <Route path="/MM-804/humidity" element={<Humidity />} />
+            <Route path="/MM-804/aqi" element={<Aqi />} />
+            <Route path="/MM-804/wind" element={<Wind />} />
           </Routes>
         </main>
       </div>
