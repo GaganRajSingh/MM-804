@@ -5,16 +5,16 @@
   width: 100%;
   min-height: 100vh;
   background-color: white;
-  background-image: url('../img/gratisography-13H-free-stock-photo.jpg');
+  /* background-image: url('../img/gratisography-13H-free-stock-photo.jpg'); */
   background-position: center;
   background-size: cover;
 }
 
 /* Add the following code to create a parallax effect */
-.App:hover {
+/* .App:hover {
   background-position-x: calc(50% - 5px);
   background-position-y: calc(50% - 5px);
-}
+} */
 
 .row {
     display: grid;
@@ -103,15 +103,15 @@
   .title {
     color: green;
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 16px;
     position: absolute;
     top: 30%;
-    left: 55%;
+    left: 52%;
     transform: translate(-50%, -50%);
     font-family: "Lucida Console",  monospace;
-    text-shadow: 2px 2px 8px #ffffff;
+    text-shadow: 2px 2px 8px #234e40;
   }
 
   .author {
@@ -120,7 +120,7 @@
     margin-bottom: 32px;
     position: absolute;
     top: 40%;
-    left: 55%;
+    left: 52%;
     transform: translate(-50%, -50%);
   }
   
